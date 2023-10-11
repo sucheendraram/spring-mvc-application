@@ -15,22 +15,35 @@
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
 		<load-on-startup>1</load-on-startup>
 	</servlet>
-	
-	
+
+
 	<servlet-mapping>
 		<servlet-name>first-controller</servlet-name>
 		<url-pattern>/list-students</url-pattern>
 	</servlet-mapping>
-	
+
 	<servlet-mapping>
 		<servlet-name>first-controller</servlet-name>
 		<url-pattern>/add-student</url-pattern>
 	</servlet-mapping>
-	
+
 	<servlet-mapping>
 		<servlet-name>first-controller</servlet-name>
 		<url-pattern>/save-student</url-pattern>
 	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>first-controller</servlet-name>
+		<url-pattern>/load-student</url-pattern>
+	</servlet-mapping>
 	
+	<servlet-mapping>
+		<servlet-name>first-controller</servlet-name>
+		<url-pattern>/update-student</url-pattern>
+	</servlet-mapping>
 	
+	<servlet-mapping>
+		<servlet-name>first-controller</servlet-name>
+		<url-pattern>/delete-student</url-pattern>
+	</servlet-mapping>
+
 </web-app>
