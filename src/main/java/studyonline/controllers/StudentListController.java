@@ -15,11 +15,8 @@ public class StudentListController {
 
 	@RequestMapping("/list-students")
 	public String getStudentListPage(Model m) throws Exception {
-		System.out.println("Student list page is called!!");
 		List<Student> allStudents = StudentDBUtil.getAllStudents();
-		System.out.println("All STUDENTS" + allStudents);
-		m.addAttribute("student_list",allStudents);
-		System.out.println("<PDE"+m);
+		m.addAttribute("student_list", allStudents);
 		return "WEB-INF/views/students-list-page.jsp";
 	}
 }
