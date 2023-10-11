@@ -11,14 +11,9 @@ import studyonline.utils.StudentDBUtil;
 @Controller
 public class StudentUpdateController {
 
-	public StudentUpdateController() {
-		System.out.println("Update controller!!! ");
-	}
-
 	@RequestMapping("/load-student")
 	public String loadStudent(@RequestParam int studentId, Model m) {
 		try {
-
 			Student studentData = StudentDBUtil.getStudentDetailsUsingId(studentId);
 			m.addAttribute("SINGLE_STUDENT_DATA", studentData);
 		} catch (Exception e) {
@@ -33,9 +28,7 @@ public class StudentUpdateController {
 			@RequestParam String department, @RequestParam String grade, @RequestParam String regNo, Model model) {
 		try {
 			Student updatedStudent = new Student(studentId, firstName, lastName, age, email, department, grade, regNo);
-			System.out.println("UPDATED STUDENT " + updatedStudent);
 			StudentDBUtil.updateStudent(updatedStudent);
-			System.out.println("Update Successful");
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 		}
